@@ -1,12 +1,4 @@
-w_pix = 2000; % pix
-h_pix = 2000; % pix
-
-pixSizeSample_nm = 69; % nm
-
-powerAfterObjective_mW = 122; % mW
-
-
-%% Code
+function powerDensity = calculatePowerDensity(w_pix,h_pix,pixSizeSample_nm,powerAfterObjective_mW)
 
 % get area in cm^2
 w_nm = w_pix*pixSizeSample_nm;
@@ -28,4 +20,4 @@ powerAfterObjective_kW = powerAfterObjective_W/1000;
 % power density
 powerDensity = powerAfterObjective_kW/area_cm2;
 
-fprintf('The power density is %.3f kw/cm^2.\n',powerDensity)
+end
